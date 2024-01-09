@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <TextView
+        android:id="@+id/nameTextview"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text="Name"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+
+    <TextView
+        android:id="@+id/BirthTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Birth Date"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextview" />
+
+    <TextView
+        android:id="@+id/BirthValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:ellipsize="end"
+        android:paddingEnd="8dp"
+        android:text="0000-00-00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BirthTextView"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+    <ImageView
+        android:id="@+id/BirthImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit_calendar_24"
+        app:layout_constraintBottom_toBottomOf="@id/BirthTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameEditText"
+        app:layout_constraintTop_toTopOf="@id/BirthTextView" />
+
+    <TextView
+        android:id="@+id/BloodTypeTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Blood Type"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/BirthTextView" />
+
+    <RadioGroup
+        android:id="@+id/BloodTypeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/BloodTypeTextView"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/BloodTypeTextView">
+
+        <RadioButton
+            android:id="@+id/BloodTypePlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rh+" />
+
+        <RadioButton
+            android:id="@+id/BloodTypeMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Rh-" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/BloodTypeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/BloodTypeTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameEditText"
+        app:layout_constraintStart_toEndOf="@+id/BloodTypeRadioGroup"
+        app:layout_constraintTop_toTopOf="@id/BloodTypeTextView" />
+
+
+    <TextView
+        android:id="@+id/PhoneTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Phone Num"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/BloodTypeTextView" />
+
+
+    <EditText
+        android:id="@+id/PhoneEditText"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:hint="010-1234-0214"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PhoneTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+
+    <TextView
+        android:id="@+id/NoticeTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Notice"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneTextView" />
+
+
+    <CheckBox
+        android:id="@+id/NoticeCheckbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:text="주의사항 노출"
+        app:layout_constraintBottom_toBottomOf="@+id/NoticeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+        app:layout_constraintStart_toStartOf="@+id/NoticeEditText"
+        app:layout_constraintTop_toTopOf="@id/NoticeTextView" />
+
+    <EditText
+        android:id="@+id/NoticeEditText"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="주의하시조"
+
+        app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/NoticeCheckbox" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/SaveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:clickable="true"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_save_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/Birthlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="BirthValueTextView,BirthImageView"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

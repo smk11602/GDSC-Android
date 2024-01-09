@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/nameTextview"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text="Name"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="송민경"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+
+    <TextView
+        android:id="@+id/BirthTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Birth Date"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextview" />
+
+    <TextView
+        android:id="@+id/BirthValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="0000-00-00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BirthTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+
+    <TextView
+        android:id="@+id/BloodTypeTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Blood Type"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/BirthTextView" />
+
+    <TextView
+        android:id="@+id/BloodTypeValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BloodTypeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/PhoneTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Phone Num"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/BloodTypeTextView" />
+
+    <TextView
+        android:id="@+id/PhoneValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:text="010-1234-0214"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PhoneTextView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_local_phone_24"
+        app:layout_constraintBottom_toBottomOf="@id/PhoneValueTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
+        app:layout_constraintTop_toTopOf="@id/PhoneValueTextView" />
+
+
+    <TextView
+        android:id="@+id/NoticeTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Notice"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nameTextview"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneTextView" />
+
+    <TextView
+        android:id="@+id/NoticeValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="주의해조요"
+        app:layout_constraintBaseline_toBaselineOf="@+id/NoticeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/goEditActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_edit_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@id/goEditActivityButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_delete_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/emergencyContactlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="PhoneValueTextView,imageView"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
